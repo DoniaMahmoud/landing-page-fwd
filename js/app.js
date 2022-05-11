@@ -58,7 +58,9 @@ function createNavbarSections() {
     navbarSections.appendChild(listOfSections);
   });
 }
-// Add class 'active' to section when near top of viewport
+createNavbarSections();
+
+// Set sections as active
 function addActiveClassToSections() {
   for (sec of sections) {
     if (isInViewport(sec) === true) {
@@ -69,8 +71,6 @@ function addActiveClassToSections() {
   }
 }
 
-// Scroll to anchor ID using scrollTO event
-
 /**
  * End Main Functions
  * Begin Events
@@ -79,14 +79,13 @@ function addActiveClassToSections() {
 window.addEventListener("scroll", function () {
   addActiveClassToSections();
 });
-// navbarSections.addEventListener("click", function () {
-//   var elmntToView = document.getElementById("section");
-//   elmntToView.scrollIntoView();
-// });
-// Build menu
 
 // Scroll to section on link click
-
-// Set sections as active
-
-createNavbarSections();
+document.querySelectorAll("a").forEach((anchor) => {
+  anchor.addEventListener("click", function (e) {
+    e.preventDefault();
+    document.querySelector(this.getAttribute("href")).scrollIntoView({
+      behavior: "smooth",
+    });
+  });
+});
