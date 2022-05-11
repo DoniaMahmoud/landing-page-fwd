@@ -1,13 +1,9 @@
 # Landing Page Project
 
-## Table of Contents
+# Introduction
+This project is part of the Egypt-FWD initiative with Udacity Nanodegree in Web Development Professional Track.
 
-* [Instructions](#instructions)
-
-## Instructions
-
-The starter project has some HTML and CSS styling to display a static version of the Landing Page project. You'll need to convert this project from a static project to an interactive one. This will require modifying the HTML and CSS files, but primarily the JavaScript file.
-
-To get started, open `js/app.js` and start building out the app's functionality
-
-For specific, detailed instructions, look at the project instructions in the Udacity Classroom.
+# Features
+1. Dynamic Navbar.
+2. Scroll to the section when clicking on it in navbar.
+3. By scrolling, Set class to active state on the navigation items when a section is in the viewport.
