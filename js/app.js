@@ -52,3 +52,19 @@
 // Scroll to section on link click
 
 // Set sections as active
+
+//save all elements with class name sections to array
+const sections = document.querySelectorAll("section");
+const arrOfSections = Array.from(sections);
+const navbarSections = document.getElementById("navbar__list");
+
+function createNavbarSections() {
+  arrOfSections.map((element) => {
+    let listOfSections = document.createElement("li");
+    listOfSections.innerHTML = `<a href="#${
+      element.id
+    }" class="menu__link">${element.getAttribute("data-nav")}</a>`;
+    navbarSections.appendChild(listOfSections);
+  });
+}
+createNavbarSections();
