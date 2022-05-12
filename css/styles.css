@@ -82,12 +82,30 @@ section {
     color: #000;
 }
 
-.navbar__menu .menu__link:hover {
+.navbar__menu .menu__link:focus {
     background: #333;
     color: #fff;
     transition: ease 0.3s all;
 }
 
+@media only screen and (max-width: 350px){
+    .navbar__menu .menu__link {
+        padding: 0.2em;
+    }
+    .navbar__menu ul {
+        text-align: center;
+    }
+    
+}
+@media only screen and (min-width:350px) and (max-width: 450px){
+    .navbar__menu .menu__link {
+        padding: 0.5em;
+    }
+    .navbar__menu ul {
+        text-align: center;
+    }
+    
+}
 /* Header Styles */
 .page__header {
     background: #fff;
@@ -122,6 +140,7 @@ section {
         padding: 4em;
     }
 }
+
 
 section:nth-of-type(even) .landing__container {
     margin-right: 0;

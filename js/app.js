@@ -65,8 +65,11 @@ function addActiveClassToSections() {
   for (sec of sections) {
     if (isInViewport(sec) === true) {
       sec.classList.add("active");
+      sec.style.cssText = "background-color:rgb(0,0,0,0.5)";
     } else {
       sec.classList.remove("active");
+      sec.style.cssText =
+        "background-color:linear-gradient(0deg, rgba(255,255,255,.1) 0%, rgba(255,255,255,.2) 100%) ";
     }
   }
 }
